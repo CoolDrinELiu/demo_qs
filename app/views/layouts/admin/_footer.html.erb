@@ -2,16 +2,12 @@
   <hr>
   <div class="footer-inner">
     <div class="footer-content">
-     	<p style="text-align:center;">Copyright © 2017-<%= Time.current.year %> SolarBrain, latest deployed at: <%= "#{@last_deploy}"%>, All Rights Reserved. 
+     	<p style="text-align:center;">Copyright © 2017-<%= Time.current.year %>, All Rights Reserved. 
         <span class="download-app">
-          <%= link_to AppVersion.download_url(:ios) do %>
-            <%= image_tag aws_image_url('admin/app_store.svg') %>
-          <% end %>
+          
         </span>
         <span class="download-app">
-          <%= link_to AppVersion.download_url(:android) do %>
-            <%= image_tag aws_image_url('admin/play_store.svg') %>
-          <% end %>
+          
         </span>
         </p>
     </div>
