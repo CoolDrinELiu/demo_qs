@@ -1,0 +1,9 @@
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div>
+  <div class="container">
+    <%= render_list :class => "nav navbar-nav" do |li|
+      li << link_to(t("menu.home"), admin_kpis_path)
+      li << link_to(t("menu.stc"), admin_stcs_path )
+    end %>
+  </div><!--/end container-->
+</div><!--/navbar-collapse-->

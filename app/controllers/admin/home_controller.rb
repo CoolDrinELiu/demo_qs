@@ -1,4 +1,4 @@
-class Admin::HomeController < ActionController::Base
+class Admin::HomeController < Admin::ApplicationController
   # before_action :authenticate_user!
 
   def index

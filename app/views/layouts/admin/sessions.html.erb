@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SolarBrain</title>
+  <script src='https://www.google.com/jsapi'></script>
+  <%= favicon_link_tag "solarbrain.ico" %>
+  <%= stylesheet_link_tag "admin/application", :media => "all" %>
+  <%= javascript_include_tag "admin/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+  <nav class="navbar navbar-default navbar-admin navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">
+          <%= image_tag "solar-brain_logo.png", class: "sbrain_logo" %>
+          <small>
+            SolarBrain
+          </small>
+        </a>
+      </div>
+      <div class="navbar-buttons pull-right download_app_login">
+        <span class="download-app">
+          <%= link_to AppVersion.download_url(:ios) do %>
+            <%= image_tag aws_image_url('admin/app_store.svg') %>
+          <% end %>
+        </span>
+        <span class="download-app">
+          <%= link_to AppVersion.download_url(:android) do %>
+            <%= image_tag aws_image_url('admin/play_store.svg') %>
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="main-container container-fluid">
+      <div class="main-content">
+
+        <div class="page-content">
+          <div class="row-fluid">
+            <div class="col-sm-12">
+                <%= bootstrap_flash %>
+
+                <%= yield %>
+            </div><!-- /.span -->
+          </div><!-- /.row-fluid -->
+        </div><!-- /.page-content -->
+
+      </div><!-- /.main-content -->
+
+<footer id="footer">
+        <div class="footer-top" style="height:60px;"></div>
+        <div class="footer-bottom">
+        <div class="container">
+            <div class="row show-grid">
+                <div class="col-sm-12">
+                    <p style="text-align:center;">Copyright © 2017-<%= Time.current.year %> SolarBrain, All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
