@@ -2,22 +2,17 @@
 <html>
   <head>
     <title>Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="no-skin admin-page">
     <%= render '/layouts/admin/header' %>
     <div class="main-container" id="main-container">
-      <div id="sidebar" class="sidebar responsive">
-
-        <%= render '/layouts/admin/menus' %>
-        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-        </div>
-      </div>
-
       <div class="main-content">
         <div class="main-content-inner">
           <div class="page-content">
