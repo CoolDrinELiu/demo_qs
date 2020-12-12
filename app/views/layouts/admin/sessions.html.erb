@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SolarBrain</title>
+  <title>GF System</title>
   <script src='https://www.google.com/jsapi'></script>
-  <%= favicon_link_tag "solarbrain.ico" %>
-  <%= stylesheet_link_tag "admin/application", :media => "all" %>
-  <%= javascript_include_tag "admin/application" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,23 +14,13 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a href="#" class="navbar-brand">
-          <%= image_tag "solar-brain_logo.png", class: "sbrain_logo" %>
           <small>
-            SolarBrain
+            GF System
           </small>
         </a>
       </div>
       <div class="navbar-buttons pull-right download_app_login">
-        <span class="download-app">
-          <%= link_to AppVersion.download_url(:ios) do %>
-            <%= image_tag aws_image_url('admin/app_store.svg') %>
-          <% end %>
-        </span>
-        <span class="download-app">
-          <%= link_to AppVersion.download_url(:android) do %>
-            <%= image_tag aws_image_url('admin/play_store.svg') %>
-          <% end %>
-        </span>
+
       </div>
     </div>
   </nav>
@@ -58,7 +47,7 @@
         <div class="container">
             <div class="row show-grid">
                 <div class="col-sm-12">
-                    <p style="text-align:center;">Copyright © 2017-<%= Time.current.year %> SolarBrain, All Rights Reserved.</p>
+                    <p style="text-align:center;">Copyright © 2017-<%= Time.current.year %> GF System, All Rights Reserved.</p>
                 </div>
             </div>
         </div>

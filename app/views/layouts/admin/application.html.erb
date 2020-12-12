@@ -15,7 +15,15 @@
       <div class="main-content">
         <div class="main-content-inner">
           <div class="page-content">
-            <%= yield %>
+            <div class="container-scroller">
+              <%= render 'layouts/admin/header' %>
+              <div class="container-fluid page-body-wrapper">
+                <%= render 'layouts/admin/nav'%>
+                <div class="main-panel">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

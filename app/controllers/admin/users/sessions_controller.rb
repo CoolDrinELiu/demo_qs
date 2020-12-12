@@ -25,14 +25,17 @@ class Admin::Users::SessionsController < Devise::SessionsController
   #   devise_parameter_sanitizer.for(:sign_in) << :attribute
   # end
 
-  # def after_sign_in_path_for(resource)
-  #   index_list_admin_kpis_path
-  # end
+  def after_sign_in_path_for(resource)
+    admin_root_path
+  end
 
-  # def after_sign_out_path_for(resource_or_scope)
-  #   new_user_session_path
-  # end
+  def after_sign_out_path_for(resource_or_scope)
+    admin_root_path
+  end
 
+  def after_sign_up_path_for(resource)
+    admin_root_path
+  end
   private
 
   # def require_no_authentication
